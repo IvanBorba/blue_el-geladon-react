@@ -1,6 +1,7 @@
 import "./style.css";
+import { toast } from "react-hot-toast";
 
-const Card = ({ key, palette }) => {
+const Card = ({ palette }) => {
   return (
     <div className="card-container">
       <div>
@@ -9,7 +10,9 @@ const Card = ({ key, palette }) => {
       </div>
       <h3>{palette.sabor}</h3>
       <p>{palette.descricao}</p>
-      <button>Adicionar</button>
+      <button onClick={() => toast.error("Sessão em desenvolvimento")}>
+        Adicionar
+      </button>
     </div>
   );
 };
