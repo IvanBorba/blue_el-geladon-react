@@ -1,0 +1,38 @@
+[
+  {
+    "sabor": "Açaí com Leite Condensado",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "../assets/images/acai-com-leite-condensado.png",
+    "preco": 10
+  },
+  {
+    "sabor": "Banana com Nutella",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "../assets/images/banana-com-nutella.png",
+    "preco": 10
+  },
+  {
+    "sabor": "Chocolate Belga",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "../assets/images/chocolate-belga.png",
+    "preco": 7
+  },
+  {
+    "sabor": "Chocolate Belga com Brigadeiro",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "../assets/images/chocolate-belga-com-brigadeiro.png",
+    "preco": 10
+  },
+  {
+    "sabor": "Chocolate Branco",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "../assets/images/chocolate-branco.png",
+    "preco": 7
+  },
+  {
+    "sabor": "Coco com doce de Leite",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "../assets/images/coco-com-doce-de-leite.png",
+    "preco": 10
+  }
+]
