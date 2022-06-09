@@ -1,25 +1,25 @@
 .card-container {
-  width: 100px;
-  height: 170px;
+  width: 110px;
+  height: 190px;
   padding: 8px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
 }
 
-.card-container > div {
+.card-header {
   display: flex;
   width: 100%;
   height: 70px;
   justify-content: space-around;
 }
 
-.card-container > div > p {
+.card-header > p {
   margin-top: 15px;
   font-size: smaller;
 }
 
-.card-container > div > img {
+.card-header > img {
   width: 50px;
 }
 
@@ -34,4 +34,17 @@
   font-size: xx-small;
   height: 35px;
   margin-bottom: 5px;
+}
+
+.card-body {
+  height: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-body > img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  cursor: pointer;
 }

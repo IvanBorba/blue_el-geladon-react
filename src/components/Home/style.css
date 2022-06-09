@@ -13,6 +13,10 @@
   margin-bottom: 1.5rem;
 }
 
+.home-container > input {
+  margin-bottom: 2rem;
+}
+
 .home-container > div {
   display: flex;
   flex-wrap: wrap;

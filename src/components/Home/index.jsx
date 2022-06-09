@@ -1,34 +1,42 @@
 import "./style.css";
-import { useState, useEffect } from "react";
 import Card from "../Card";
+import { useState } from "react";
 
-const Home = () => {
-  // Declaração dos states
-  const [palettes, setPalettes] = useState([]);
-
-  // Declaração das funções
-  const getPalettes = async () => {
-    const response = await fetch("http://localhost:8080/paletas/listar-todas");
-    const palettesList = await response.json();
-
-    console.log("Fez requisição");
-    setPalettes(palettesList);
-  };
-
-  // Declaração dos ciclos de vida
-
-  // Ciclo de vida de montagem (array vazio)
-  useEffect(() => {
-    getPalettes();
-  }, []);
+const Home = ({ palettes, getPalettes }) => {
+  const [filterInput, setfilterInput] = useState("");
 
   return (
     <div className="home-container">
       <h2>Lista de Paletas</h2>
+      <input
+        value={filterInput}
+        onChange={(event) => setfilterInput(event.target.value)}
+        placeholder="Filtrar por nome"
+      />
       <div>
-        {palettes.map((element) => {
-          return <Card key={element._id} palette={element} />;
-        })}
+        {filterInput !== ""
+          ? palettes
+              .filter((element) =>
+                element.sabor.toLowerCase().includes(filterInput.toLowerCase())
+              )
+              .map((element) => {
+                return (
+                  <Card
+                    getPalettes={getPalettes}
+                    key={element._id}
+                    palette={element}
+                  />
+                );
+              })
+          : palettes.map((element) => {
+              return (
+                <Card
+                  getPalettes={getPalettes}
+                  key={element._id}
+                  palette={element}
+                />
+              );
+            })}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import "./style.css";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 
-const ModalNewPalette = ({ closeModal }) => {
+const ModalNewPalette = ({ closeModal, getPalettes }) => {
   const [sabor, setSabor] = useState("");
   const [preco, setPreco] = useState("");
   const [descricao, setDescricao] = useState("");
@@ -34,6 +34,7 @@ const ModalNewPalette = ({ closeModal }) => {
     setDescricao("");
     setFoto("");
     closeModal();
+    getPalettes();
     toast.success("Paleta adicionada ao cardápio");
   };
 

@@ -6,7 +6,7 @@ import ModalNewPalette from "../Modals/ModalNewPalette";
 import { toast } from "react-hot-toast";
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({ getPalettes }) => {
   const [showModalCreate, setShowModalCreate] = useState(false);
 
   const handleShowModalCreate = () => {
@@ -36,7 +36,10 @@ const Header = () => {
         </div>
       </div>
       {showModalCreate && (
-        <ModalNewPalette closeModal={handleShowModalCreate} />
+        <ModalNewPalette
+          closeModal={handleShowModalCreate}
+          getPalettes={getPalettes}
+        />
       )}
     </>
   );

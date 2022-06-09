@@ -57,3 +57,15 @@ Passo a passo:
   - Criar os states para armazenar os valores dos inputs;
   - Criar a função que fará a requisição;
   - Chamar a função de requisição no botão de criar nova paleta;
+
+- ModalRemovePalette:
+
+  X Criar a div de fundo;
+  X Criar a div do modal;
+  X Criar uma div para o Header do modal;
+  X Posicionar os elementos do Header (titulo e botão de fechar);
+  X Criar a pergunta;
+  X Criar os botões de aceitar e não aceitar;
+
+  - Criar a função de aceitar (requisição);
+  - Chamar as funções em seus respectivos botões;
