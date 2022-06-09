@@ -20,9 +20,8 @@ Passo a passo:
   X Criar uma div para colocar a lista dentro;
   X Criar um state para armazenar a lista;
   X Renderizar a lista, colocando um Card para cada elemento dela;
-
-  - Criar uma função para alimentar a lista com os dados do Back-end;
-  - Chamar essa função;
+  X Criar uma função para alimentar a lista com os dados do Back-end;
+  X Chamar essa função;
 
 - Card:
 
@@ -41,3 +40,20 @@ Passo a passo:
   X Posicionar o logo;
   X Criar uma div para as informações de contato;
   X Posicionar as informações de contato;
+
+- ModalNewPalette:
+
+  # estrutura
+
+  X Criar a div de fundo;
+  X Criar a div do modal;
+  X Criar uma div para o Header do modal;
+  X Posicionar os elementos do Header (titulo e botão de fechar);
+  X Criar inputs;
+  X Criar botão para enviar a requisição;
+
+  # lógica
+
+  - Criar os states para armazenar os valores dos inputs;
+  - Criar a função que fará a requisição;
+  - Chamar a função de requisição no botão de criar nova paleta;

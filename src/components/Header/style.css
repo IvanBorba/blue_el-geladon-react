@@ -15,11 +15,23 @@
   margin-left: 10vw;
 }
 
-.header-container > div > img {
+.headerTitle-container > img {
   height: 10vh;
 }
 
-.header-container > img {
+.headerOptions-container {
+  display: flex;
+}
+
+.headerOptions-checkoutIcon {
   height: 6vh;
-  margin-left: 30vw;
+  margin-left: 1vw;
+  margin-bottom: 1vh;
+  cursor: pointer;
+}
+
+.headerOptions-newPaletteIcon {
+  height: 7vh;
+  margin-top: 0.5vh;
+  cursor: pointer;
 }
