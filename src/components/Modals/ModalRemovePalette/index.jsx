@@ -19,6 +19,7 @@ const ModalRemovePalette = ({ closeModal, palette, getPalettes }) => {
     getPalettes();
     toast.success("Paleta excluida com sucesso");
   };
+
   return (
     <div className="modal-overlay">
       <div className="modalRemove-container">

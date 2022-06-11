@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import { Toaster } from "react-hot-toast";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 const App = () => {
   // Declaração dos states
@@ -11,11 +12,11 @@ const App = () => {
 
   // Declaração das funções
   const getPalettes = async () => {
-    const response = await fetch("http://localhost:8080/paletas/listar-todas");
-    const palettesList = await response.json();
+    const response = await axios.get(
+      "https://rickandmortyapi.com/api/character"
+    );
 
-    console.log("Fez requisição");
-    setPalettes(palettesList);
+    setPalettes(response.data);
   };
 
   // Declaração dos ciclos de vida

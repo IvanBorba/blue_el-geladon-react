@@ -1,14 +1,3 @@
-.modal-container {
-  width: 30vw;
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #d0db97;
-  border-radius: 10px;
-  border: 2px solid #4949494d;
-  padding: 0.4rem;
-}
-
 .modal-container > div {
   display: flex;
   justify-content: space-between;
@@ -16,15 +5,6 @@
   padding-inline: 0.4rem;
 }
 
-.modal-container > div > h3 {
-}
-
-.modal-container > div > button {
-}
-
 .modal-container > input {
   margin-bottom: 0.2rem;
-}
-
-.modal-container > button {
 }

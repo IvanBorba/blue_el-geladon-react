@@ -54,18 +54,38 @@ Passo a passo:
 
   # lógica
 
-  - Criar os states para armazenar os valores dos inputs;
-  - Criar a função que fará a requisição;
-  - Chamar a função de requisição no botão de criar nova paleta;
+  X Criar os states para armazenar os valores dos inputs;
+  X Criar a função que fará a requisição;
+  X Chamar a função de requisição no botão de criar nova paleta;
 
 - ModalRemovePalette:
+
+  # estrutura
+
+  X Criar a div de fundo;
+  X Criar a div do modal;
+  X Criar a pergunta;
+  X Criar os botões de aceitar e não aceitar;
+
+  # lógica
+
+  X Criar a função de aceitar (requisição);
+  X Chamar as funções em seus respectivos botões;
+
+- ModalEditPalette:
+
+  # estrutura
 
   X Criar a div de fundo;
   X Criar a div do modal;
   X Criar uma div para o Header do modal;
   X Posicionar os elementos do Header (titulo e botão de fechar);
-  X Criar a pergunta;
-  X Criar os botões de aceitar e não aceitar;
+  X Criar inputs;
+  X Criar botão para enviar a requisição;
 
-  - Criar a função de aceitar (requisição);
-  - Chamar as funções em seus respectivos botões;
+  # lógica
+
+  X Criar os states para armazenar os valores dos inputs;
+  X Alimentar os states que criamos com os valores da paleta que será recebida por Props;
+  X Criar a função que fará a requisição;
+  X Chamar a função de requisição no botão para editar a paleta;

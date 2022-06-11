@@ -1,16 +1,22 @@
 import "./style.css";
 import { toast } from "react-hot-toast";
-import editIcon from "../../assets/images/edit.png";
-import removeIcon from "../../assets/images/trash.png";
+import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import ModalRemovePalette from "../Modals/ModalRemovePalette";
+import ModalEditPalette from "../Modals/ModalEditPalette";
 import { useState } from "react";
 
 const Card = ({ palette, getPalettes }) => {
   const [showRemoveModal, setShowRemoveModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
 
   const handleShowRemoveModal = () => {
     setShowRemoveModal(!showRemoveModal);
   };
+
+  const handleShowEditModal = () => {
+    setShowEditModal(!showEditModal);
+  };
+
   return (
     <>
       <div className="card-container">
@@ -21,13 +27,12 @@ const Card = ({ palette, getPalettes }) => {
         <h3>{palette.sabor}</h3>
         <p>{palette.descricao}</p>
         <div className="card-body">
-          <img alt="Icone de edição" title="Editar" src={editIcon} />
-          <img
-            onClick={handleShowRemoveModal}
-            alt="Icone de remoção"
-            title="Remover"
-            src={removeIcon}
-          />
+          <span title="Editar">
+            <FaEdit onClick={handleShowEditModal} />
+          </span>
+          <span title="Remover">
+            <FaTrashAlt onClick={handleShowRemoveModal} />
+          </span>
         </div>
         <button onClick={() => toast.error("Sessão em desenvolvimento")}>
           Adicionar
@@ -36,6 +41,13 @@ const Card = ({ palette, getPalettes }) => {
       {showRemoveModal && (
         <ModalRemovePalette
           closeModal={handleShowRemoveModal}
+          palette={palette}
+          getPalettes={getPalettes}
+        />
+      )}
+      {showEditModal && (
+        <ModalEditPalette
+          closeModal={handleShowEditModal}
           palette={palette}
           getPalettes={getPalettes}
         />

@@ -10,3 +10,14 @@
   justify-content: center;
   align-items: center;
 }
+
+.modal-container {
+  width: 30vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #d0db97;
+  border-radius: 10px;
+  border: 2px solid #4949494d;
+  padding: 0.4rem;
+}
