@@ -13,7 +13,7 @@ const App = () => {
   // Declaração das funções
   const getPalettes = async () => {
     const response = await axios.get(
-      "https://rickandmortyapi.com/api/character"
+      "http://localhost:8080/paletas/listar-todas"
     );
 
     setPalettes(response.data);
