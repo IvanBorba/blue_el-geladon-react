@@ -1,6 +1,7 @@
 import "./style.css";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import api from "../../../api";
 
 const ModalEditPalette = ({ closeModal, palette, getPalettes }) => {
   const [sabor, setSabor] = useState(palette.sabor);
@@ -16,16 +17,25 @@ const ModalEditPalette = ({ closeModal, palette, getPalettes }) => {
       foto,
     };
 
-    const response = await fetch(
-      `http://localhost:8080/paletas/atualizar-paleta/${palette._id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "cors",
-        body: JSON.stringify(editedPalette),
-      }
+    // REQUISIÇÃO COM FETCH
+
+    // const response = await fetch(
+    //   `http://localhost:8080/paletas/atualizar-paleta/${palette._id}`,
+    //   {
+    //     method: "PUT",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     mode: "cors",
+    //     body: JSON.stringify(editedPalette),
+    //   }
+    // );
+
+    // REQUISIÇÃO COM AXIOS
+
+    const response = await api.put(
+      `/paletas/atualizar-paleta/${palette._id}`,
+      editedPalette
     );
 
     if (response.status !== 200) {

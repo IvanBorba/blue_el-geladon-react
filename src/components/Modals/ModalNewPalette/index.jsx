@@ -1,6 +1,7 @@
 import "./style.css";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+import api from "../../../api";
 
 const ModalNewPalette = ({ closeModal, getPalettes }) => {
   const [sabor, setSabor] = useState("");
@@ -16,14 +17,20 @@ const ModalNewPalette = ({ closeModal, getPalettes }) => {
       foto,
     };
 
-    const response = await fetch("http://localhost:8080/paletas/criar-paleta", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      mode: "cors",
-      body: JSON.stringify(newPalette),
-    });
+    // ----- REQUISIÇÃO COM FETCH
+
+    // const response = await fetch("http://localhost:8080/paletas/criar-paleta", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   mode: "cors",
+    //   body: JSON.stringify(newPalette),
+    // });
+
+    // ----- REQUISIÇÃO COM AXIOS
+
+    const response = await api.post("/paletas/criar-paleta", newPalette);
 
     if (response.status !== 201) {
       return toast.error("Falha na criação da paleta");

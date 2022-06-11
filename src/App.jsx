@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import { Toaster } from "react-hot-toast";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from "./api";
 
 const App = () => {
   // Declaração dos states
@@ -12,9 +12,7 @@ const App = () => {
 
   // Declaração das funções
   const getPalettes = async () => {
-    const response = await axios.get(
-      "http://localhost:8080/paletas/listar-todas"
-    );
+    const response = await api.get("/paletas/listar-todas");
 
     setPalettes(response.data);
   };
